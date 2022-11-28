@@ -1,0 +1,35 @@
+.header-container {
+    color: white;
+    background-color: #00A2E1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.title-container {
+    /* border: solid 1px blue; */
+    display: flex;
+    align-items: center;
+    margin-left: 56px;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.links-container {
+    /* border: solid 1px red; */
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.shortlist-container , .contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: solid 1px yellow; */
+    width: 25%;
+}

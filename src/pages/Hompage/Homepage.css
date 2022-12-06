@@ -1,0 +1,14 @@
+.homepage-container {
+    background-color: aquamarine;
+    border: solid black 3px;
+}
+
+.cities-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contact-links-container {
+    background-color: pink;
+}

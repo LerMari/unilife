@@ -1,0 +1,18 @@
+.footer {
+    background-color: black;
+    height: 100px;
+    color: lightgrey;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-links, .footer-copyright{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+
+.footer-copyright {
+    width: 30%;
+} 

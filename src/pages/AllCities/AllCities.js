@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import './AllCities.css'
+import {Link} from 'react-router-dom'
 
 function AllCities({city}) {
 
@@ -27,7 +28,9 @@ function AllCities({city}) {
     <div>
         <h2>Search by City</h2>
         <div className="city-list">
+        <Link to='citydetails'>
              {citiesList.map(item => <p className="city-link">{item.name}</p>)}
+             </Link>
         </div>
     
     

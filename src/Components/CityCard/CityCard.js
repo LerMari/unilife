@@ -1,5 +1,6 @@
 import React from 'react'
 import './CityCard.css'
+import {Link} from 'react-router-dom'
 
 function CityCard({city, cityImg, borderRadius}) {
 
@@ -14,8 +15,10 @@ const cardStyle={
 
   return (
     <div style={cardStyle} className="cityCard">
+      <Link to='citydetails'>
         <h2>{city.name}</h2>
         <p>{city.property_count} properties</p>
+      </Link>  
     </div>
   )
 }

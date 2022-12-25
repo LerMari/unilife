@@ -5,6 +5,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Homepage from './pages/Hompage/Homepage';
 import coverImg from './assets/cover-img.png'
 import Footer from './Components/Footer/Footer';
+import Social from './Components/Social/Social';
 
 
 
@@ -20,6 +21,7 @@ function App() {
        <Route path='/' element={<Homepage imgSrc={coverImg}/>} />
        </Routes>
       </BrowserRouter>
+      <Social />
       <Footer />
     </div>
   )

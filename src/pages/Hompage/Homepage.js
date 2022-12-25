@@ -3,6 +3,8 @@ import Banner from '../../Components/Banner/Banner'
 import './Homepage.css'
 import axios from 'axios'
 import CityCard from '../../Components/CityCard/CityCard'
+import SearchBar from '../../Components/SearchBar/SearchBar'
+
 
 function Homepage({imgSrc}) {
     const baseUrl="https://unilife-server.herokuapp.com/";
@@ -22,6 +24,7 @@ function Homepage({imgSrc}) {
   return (
     <div className="homepage-container">
         <Banner bannerImg={imgSrc}/>
+        <SearchBar />
 
         <div className="cities-container">
 
@@ -31,9 +34,8 @@ function Homepage({imgSrc}) {
 
             {console.log({citiesList})}
         </div>
-        <div className="contact-links-container">
-            contact
-        </div>
+        <button className="all-cities-button">See all cities</button>
+
     </div>
   )
 }

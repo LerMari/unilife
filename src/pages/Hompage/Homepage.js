@@ -4,7 +4,7 @@ import './Homepage.css'
 import axios from 'axios'
 import CityCard from '../../Components/CityCard/CityCard'
 import SearchBar from '../../Components/SearchBar/SearchBar'
-
+import {Link} from 'react-router-dom'
 
 function Homepage({imgSrc}) {
     const baseUrl="https://unilife-server.herokuapp.com/";
@@ -34,7 +34,9 @@ function Homepage({imgSrc}) {
 
             {console.log({citiesList})}
         </div>
-        <button className="all-cities-button">See all cities</button>
+        <Link className="all-cities-button"
+              to={'/AllCities'}
+              >See all cities</Link>
 
     </div>
   )

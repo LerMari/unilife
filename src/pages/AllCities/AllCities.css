@@ -1,0 +1,17 @@
+.city-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.city-link {
+    border-radius: 24px;
+    width: 302px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #CED3D8;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}

@@ -22,8 +22,8 @@ function App() {
       <Routes>
        <Route path='/' element={<Homepage imgSrc={coverImg}/>} />
        <Route path='/allcities' element={<AllCities />} />
-       <Route path='/homedetails' element={<HomeDetails />} />
-       <Route path='/citydetails' element={<CityDetails />} />
+       <Route path='/homedetails/:propertyId' element={<HomeDetails />} />
+       <Route path='/citydetails/:cityId' element={<CityDetails />} />
        </Routes>
       </BrowserRouter>
       <Social />

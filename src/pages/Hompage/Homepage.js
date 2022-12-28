@@ -28,11 +28,18 @@ function Homepage({imgSrc}) {
 
         <div className="cities-container">
 
-            {citiesList.map(item => <CityCard  city={item}
-                                               cityImg={item.image_url} 
-                                               borderRadius="24px" />)}
+            {citiesList.map(item => 
 
-            {console.log({citiesList})}
+            <CityCard  key={item._id} city={item}
+                                               citiesList={citiesList}
+                                               cityImg={item.image_url} 
+                                               borderRadius="24px" />)
+                                               
+                                               
+
+                                               }
+
+
         </div>
         <Link className="all-cities-button"
               to={'/AllCities'}

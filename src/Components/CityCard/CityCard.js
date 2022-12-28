@@ -15,7 +15,7 @@ const cardStyle={
 
   return (
     <div style={cardStyle} className="cityCard">
-      <Link to='citydetails'>
+      <Link to={`citydetails/${city?._id}`}>
         <h2>{city.name}</h2>
         <p>{city.property_count} properties</p>
       </Link>  

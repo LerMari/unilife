@@ -11,7 +11,7 @@ const{cityId} = useParams();
 // console.log(cityId);
 
 //state for city
-// const [city, setCity] = React.useState({});
+const [city, setCity] = React.useState([]);
 
 //state for property
 const [propertyList, setPropertyList] = React.useState([]);
@@ -20,14 +20,24 @@ React.useEffect(
     ()=> {
         axios.get(`${baseUrl}properties/city/${cityId}`)
         .then(res=>{
-            console.log(res.data.response);
+            // console.log(res.data.response);
             setPropertyList(res.data.response);
         })
 .catch(err=>console.log(err))
     }, []
 )
-    
 
+//https://unilife-server.herokuapp.com/cities/633a96af6893d471a68cc88f
+React.useEffect(
+    ()=> {
+        axios.get(`${baseUrl}cities/${cityId}`)
+        .then(res=>{
+            console.log(res.data);
+            setCity(res.data);
+        })
+.catch(err=>console.log(err))
+    }, []
+)
 
   return (
     <div className="property-container">
@@ -38,7 +48,8 @@ React.useEffect(
                                        address={item.address}
                                                          />)
         }
-    </div>
+
+</div>
     
   )
 }

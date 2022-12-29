@@ -1,0 +1,29 @@
+.home-details-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.home-images {
+    width: 400px;
+}
+
+.home-breakdown-container{
+    border: solid 1px black;
+    width: 500px;
+}
+
+.description-container{
+    border: solid 1px black;
+    width: 500px;
+}
+
+.features-container{
+    border: solid 1px black;
+    width: 500px;
+}
+
+.bedroom-prices-container {
+    border: solid 1px black;
+    width: 500px;
+}

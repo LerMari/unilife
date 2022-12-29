@@ -1,7 +1,8 @@
 .city-list {
-    display: flex;
-    justify-content: space-around;
+    /* display: flex; */
+    /* justify-content: space-around; */
     flex-wrap: wrap;
+    border: solid 1px red;
 }
 
 .city-link {
@@ -14,4 +15,9 @@
     border: 1px solid #CED3D8;
     margin-top: 24px;
     margin-bottom: 24px;
+}
+
+.city-link:hover {
+    background-color: #3A5295;
+    color: white;
 }

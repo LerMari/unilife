@@ -9,6 +9,7 @@ function HomeDetails() {
     const baseUrl="https://unilife-server.herokuapp.com/";
 
     const [property, setProperty] = React.useState('');
+    const [features, setFeatures] = React.useState([]);
 
 
     React.useEffect(
@@ -17,6 +18,7 @@ function HomeDetails() {
             .then(res=>{
                 console.log(res.data);
                 setProperty(res.data);
+                setFeatures(res.data.key_features);
             })
     .catch(err=>console.log(err))
         }, []
@@ -24,13 +26,36 @@ function HomeDetails() {
 
 
   return (
-    <div>HomeDetails
-        <p>{property.availability}</p>
+    <div className="home-details-wrapper">
+        <div className="images-container">
+            {/* <img src={`${property?.images[0]}`} className="home-images"/> */}
+        </div>
 
-        <h3>Description</h3>
-        <p>{property.property_description}</p>
+        <div className="home-breakdown-container">
+            <p>ADDRESS</p>
+            <p>Bedrooms: {property.bedroom_count}</p>
+            <p>Bathrooms: {property.bathroom_count}</p>
+            <p>Property type: {property.property_type}</p>
+            <p>Rent: {property.rent}</p>
+            <p>Furnished type: {property.furnished}</p>
+            <p>{property.availability}</p>
+        </div>
+        
+        <div className="description-container">
+            <h3>Description</h3>
+            <p>{property.property_description}</p>
+        </div>
 
-        <h3>Key Features</h3>
+        <div className="bedroom-prices-container">
+            <h3>Bedroom Prices</h3>
+        </div>
+
+        <div className="features-container">
+            <h3>Key Features</h3>
+            {features.map(item=> 
+                <li>{item}</li>
+            )}
+        </div>
     
     </div>
   )

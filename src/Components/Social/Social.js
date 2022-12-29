@@ -1,5 +1,7 @@
 import React from 'react'
 import './Social.css'
+import {MdFacebook} from 'react-icons/md'
+import { AiFillTwitterCircle, AiFillInstagram } from "react-icons/ai";
 
 function Social() {
   return (
@@ -13,8 +15,11 @@ function Social() {
 
         <div className="social-links-cont">
             <h2>Let's Socialize</h2>
+            <MdFacebook />
             <p>Facebook</p>
+            <AiFillTwitterCircle />
             <p>Twitter</p>
+            <AiFillInstagram />
             <p>Instagram</p>
 
 

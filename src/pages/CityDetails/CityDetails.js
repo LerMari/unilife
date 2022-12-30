@@ -34,6 +34,8 @@ React.useEffect(
         .then(res=>{
             console.log(res.data);
             setCity(res.data);
+            console.log(city.data[0].name);
+            console.log(city.data[0].student_life);
         })
 .catch(err=>console.log(err))
     }, []
@@ -48,6 +50,15 @@ React.useEffect(
                                        address={item.address}
                                                          />)
         }
+
+    <div className="city-info-box">
+        {/* <h2>Being a student in {city.data[0].name}</h2>
+        <p>{city.data[0].student_life}</p>
+        <p>{city.data[0].universities}</p> */}
+
+
+        
+    </div>    
 
 </div>
     

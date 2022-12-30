@@ -4,5 +4,8 @@
     justify-content: center;
     align-items: center;
     color: white;
+}
 
+.city-card-text{
+    text-align: center;
 }

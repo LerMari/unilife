@@ -1,8 +1,50 @@
 .property-card {
     border: solid 0.5px black;
     margin: 18px;
-    width: 200px;
+    width: 250px;
+    border-radius: 16px;
 }
 .prop-image {
-    width: 200px;
+    width: 250px;
+    border-radius: 16px 16px 0 0;
+}
+
+.home-breakdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3A5295;
+    color: white;
+    height: 70px;
+    padding: 16px;
+}
+
+.bed-bath-count {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+.property-type {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px;
+    height: 35px;
+}
+
+.location {
+    display: flex;
+    height: 25px;
+    font-size: 12px;
+    margin: 16px;
+}
+
+.view-home-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 0.5px black;
+    padding: 16px;
+    height: 40px;
+    color: black;
 }

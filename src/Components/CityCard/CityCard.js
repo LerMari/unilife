@@ -9,15 +9,19 @@ const cardStyle={
     backgroundSize: 'cover',
     borderRadius: borderRadius,
     height: '250px',
-    width: '350px'
+    width: '350px',
 }
 
 
   return (
     <div style={cardStyle} className="cityCard">
-      <Link to={`citydetails/${city?._id}`}>
-        <h2>{city.name}</h2>
-        <p>{city.property_count} properties</p>
+      <Link
+      style={{color: 'white'}}
+      to={`citydetails/${city?._id}`}>
+        <div className="city-card-text">
+          <h2>{city.name}</h2>
+          <p>{city.property_count} properties</p>
+        </div>
       </Link>  
     </div>
   )

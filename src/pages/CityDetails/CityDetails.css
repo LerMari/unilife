@@ -3,3 +3,24 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+.city-info-box {
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+    background-color: #F6FAFD;
+    padding: 24px;
+    border-radius: 24px;
+    width: 90%;
+}
+
+.city-info-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.students {
+    width: 90%;
+}

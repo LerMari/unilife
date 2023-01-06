@@ -3,6 +3,7 @@ import './CityDetails.css'
 import axios from 'axios'
 import {useParams} from 'react-router-dom'
 import PropertyCard from '../../Components/PropertyCard/PropertyCard'
+import students from '../../assets/students.png'
 
 function CityDetails() {
 
@@ -32,10 +33,10 @@ React.useEffect(
     ()=> {
         axios.get(`${baseUrl}cities/${cityId}`)
         .then(res=>{
-            console.log(res.data);
-            setCity(res.data);
-            console.log(city.data[0].name);
-            console.log(city.data[0].student_life);
+            console.log(res.data.data);
+            setCity(res.data.data[0]);
+            console.log(res.data.data[0].name);
+            console.log(res.data.data[0].student_life);
         })
 .catch(err=>console.log(err))
     }, []
@@ -52,12 +53,14 @@ React.useEffect(
         }
 
     <div className="city-info-box">
-        {/* <h2>Being a student in {city.data[0].name}</h2>
-        <p>{city.data[0].student_life}</p>
-        <p>{city.data[0].universities}</p> */}
-
-
-        
+        <div className="city-info-text">
+        <h2>Being a student in {city?.name}</h2>
+        <p>{city?.student_life}</p>
+        <p>{city?.universities}</p> 
+        </div>
+        <div className="city-info-img">
+            <img src={students} className="students" />
+        </div>       
     </div>    
 
 </div>

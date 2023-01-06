@@ -28,11 +28,12 @@ function AllCities({city}) {
     <div>
         <h2>Search by City</h2>
         <div className="city-list">
-        <Link to='citydetails'>
-             {citiesList.map(item => <p className="city-link">{item.name}</p>)}
-             </Link>
+        {/* <Link to='citydetails'> */}
+             {citiesList.map(item => <Link className="city-link" to={`/citydetails/${item._id}`}> {item.name} </ Link>)}
+             {/* </Link> */}
         </div>
     
+        {/* to={`citydetails/${city?._id}`} */}
     
     </div>
   )

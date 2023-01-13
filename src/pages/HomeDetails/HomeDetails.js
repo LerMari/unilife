@@ -2,14 +2,15 @@ import React from 'react'
 import './HomeDetails.css'
 import {useParams} from 'react-router-dom'
 import axios from 'axios'
+import BedroomPrice from '../../Components/BedroomPrice/BedroomPrice'
 
 function HomeDetails() {
 
     const{propertyId} = useParams();
     const baseUrl="https://unilife-server.herokuapp.com/";
-
     const [property, setProperty] = React.useState('');
     const [features, setFeatures] = React.useState([]);
+    const [bedroomPrices, setBedroomPrices] = React.useState([]);
 
 
     React.useEffect(
@@ -17,6 +18,13 @@ function HomeDetails() {
             axios.get(`${baseUrl}properties/${propertyId}`)
             .then(res=>{
                 console.log(res.data);
+                console.log(res.data.bedroom_prices)
+                // setBedroomPrices(res.data.bedroom_prices)
+                for (let bname in res.data.bedroom_prices){
+                    bedroomPrices.push({name: bname, price: res.data.bedroom_prices[bname]}
+                        )
+                }
+                console.log(bedroomPrices);
                 setProperty(res.data);
                 setFeatures(res.data.key_features);
             })
@@ -48,15 +56,18 @@ function HomeDetails() {
 
         <div className="bedroom-prices-container">
             <h3>Bedroom Prices</h3>
+            {bedroomPrices.map(item=>
+                <BedroomPrice room={item.name}
+                              price={item.price} />
+            )}         
         </div>
 
         <div className="features-container">
             <h3>Key Features</h3>
-            {features.map(item=> 
-                <li>{item}</li>
+            {features?.map(item=> 
+                <p>{item}</p>
             )}
         </div>
-    
     </div>
   )
 }

@@ -9,6 +9,7 @@ import Social from './Components/Social/Social';
 import AllCities from './pages/AllCities/AllCities';
 import HomeDetails from './pages/HomeDetails/HomeDetails';
 import CityDetails from './pages/CityDetails/CityDetails';
+import PropertyCard from './Components/PropertyCard/PropertyCard';
 
 
 function App() {
